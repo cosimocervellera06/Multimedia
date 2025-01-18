@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta name="google-site-verification" content="XQ_bXNp1leBU9GJze12lv4oNww8FmS10HIZGrrIuJuc" />
+    <meta charset="utf-8">
+    <title>Multimedialità_video</title>
+    <script src="script.js"></script>
+    <link rel="icon" href="immagini/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  </head>
+<button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+<nav id="navbar">
+  <!--Collegamenti barra di navigazione-->
+  <table>
+    <th style="width: 50px; border: 0;"><button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button></th>
+    <th style="border: 0;"><a href="index.html">Home</a></th>
+    <th style="border: 0;"><a href="immagini.html">Immagini</a></th>
+    <th style="border: 0;"><a href="colori.html">Colori</a></th>
+    <th style="border: 0;"><a href="video.html">Video</a></th>
+    <th style="border: 0;"><a href="suoni.html">Suoni</a></th>
+    <th style="border: 0;"><a href="dimensione_file.html">Calcolo dimensioni di un file</a></th>
+  </table>
+</nav>
+  <body bgcolor="lightblue">
+    <header style="background-image: url(immagini/sfondi/video.jpg);" id="header">
+      <div class="container">
+        <h1 style="color: white;width: 100%;">I video</h1>
+      </div>
+    </header>
+    <div>
+      <table>
+        <tr>
+          <td style="border: 0;">
+            <p class="p">
+              I video sono immagini in successione riprodotte ad una velocità sufficiente
+              da fornire l'illusione del movimento.
+              Il nostro occhio guarda la realtà con una frequenza di circa <b>30 
+              immagini al secondo</b>. Quindi un video fluido deve essere composto da
+              almeno 30 immagini  al secondo, altrimenti sarà a scatti.
+              Il <b>frame rate</b> è la frequenza dei fotogrammi, misurata in <b>Hz</b>
+              o <b>fps</b> (frame per secondo).
+              Dato che noi percepiamo la realtà a 30 fps un filmato con migliaia di fps (esempio di gocce d'acqua che cadono a destra)
+              verrà percepito in slow motion (utile per analizzare eventi molto rapidi).
+            </p>            
+          </td>
+          <td style="border: 0;" class="img"><img src="immagini/foto/gocce_slowmotion.gif"></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td style="border: 0;">
+            <p>
+              L'animazione sottostante mostra una girandola in rotazione e la durata di questa animazione è di 3 secondi.
+              Il frame rate di questa animazione è controllabile tramite lo slider a destra mostrando anche il numero di
+              fps. Con un fps la girandola farà 3 rotazioni da 120°, quindi 3 fotogrammi ogni 3 secondi (1 fps), con 2 fps
+              la rotazione sarà di 60° alla volta. (6 fotogrammi in 3 secondi ovvero 2 fps) Aumentando questo numero il 
+              suo moto rotatorio sarà sempre più fluido e fedele alla realtà. Si può notare come dopo 60 fps la differenza
+              di qualità diminuisca.<br><br>Gli fps effettivi di quest'animazione dipendono ovviamente dalla frequenza dello
+              schermo utilizzato ma il numero di movimenti (e quindi fotogrammi) che la girandola compie sono esattamente
+              quelli riportati.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style=
+      "height: 400px;
+      border-radius: 150px;
+      background-image: url(http://www.scuolatwain.it/wp-content/uploads/2016/06/cielo-004.jpg);">
+      <table style="height: 350px;">
+        <tr>
+          <td style="border: 0;">
+            <div>
+              <div class="star-container">
+<!--Richiamo la funzione girandolaFPS() appena la pagina viene caricata-->
+                <div class="star"><img style="vertical-align: top; height: 300px; width: 300px;" src="immagini/foto/girandola.png" onload="girandolaFPS()"></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="border: 0;"></td>
+          <td style="border: 0;">
+            <div class="switch-container">
+              <label class="switch">
+                <input type="checkbox" id="switch-button">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <input type="range" id="fps-slider" min="3" max="360" step="3" value="90" oninput="outputUpdate(value)">
+            <span class="fps-counter"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+    <div>
+      <h2>Trasmissione dei video</h2>
+      <table>
+        <tr>
+          <td style="border: 0;" class="p">
+            <p>
+              Ci sono 3 sistemi principali di trasmissione dei video: NTSC, PAL e SECAM. 
+              Ognuno di questi sistemi utilizza una frequenza diversa di fotogrammi e ha
+              differenti caratteristiche geografiche di utilizzo. Il sistema NTSC è utilizzato
+              principalmente negli Stati Uniti e in America del Nord, e utilizza un frame rate 
+              di 30 fotogrammi al secondo. Il sistema PAL, utilizzato principalmente in Europa,
+              utilizza un frame rate di 50 fotogrammi al secondo e incorpora anche un sistema 
+              di interlacciamento per migliorare la qualità dell'immagine. Infine, il sistema
+              SECAM è utilizzato principalmente in Francia e alcuni paesi dell'Europa orientale 
+              e utilizza un frame rate di 25 fotogrammi al secondo. Ognuno di questi sistemi 
+              ha i propri vantaggi e svantaggi, come una maggiore compatibilità o una migliore
+              qualità dell'immagine, ma tutti sono stati progettati per offrire un'esperienza
+              visiva di qualità per gli spettatori. Inoltre, con l'avvento della tecnologia
+              digitale, sono stati introdotti nuovi frame rate come 50p, 60p, 120p che 
+              permettono maggiore fluidità e realismo nella riproduzione dei video.
+            </p>            
+          </td>
+          <td style="border: 0;" class="img"><img src="immagini/foto/NTSC-PAL-SECAM.png"></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>Frequenza</th>
+          <th>FPS</th>
+          <th>Particolarità</th>
+        </tr>
+        <tr>
+          <td>30p</td>
+          <td>30</td>
+          <td>per contenuti ad alta definizione</td>
+        </tr>
+        <tr>
+          <td>50i</td>
+          <td>25</td>
+          <td>è il sistema di scansione standard 
+            per il sistema di codifica analogico PAL e SECAM</td>
+        </tr>
+        <tr>
+          <td>60i</td>
+          <td>29,97</td>
+          <td>è il sistema di scansione standard 
+            per il sistema di codifica analogico NTSC</td>
+        </tr>
+        <tr>
+          <td>50p e 60p</td>
+          <td>50 e 60</td>
+          <td>utilizzate dai sistemi HDTV</td>
+        </tr>
+        <tr>
+          <td>120p</td>
+          <td>120fps</td>
+          <td>verrà utilizzato dai sistemi UHD</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+    <div>
+      <h2>Compressione dei video</h2>
+      <table>
+        <tr>
+          <td style="border: 0;">
+            <p>
+              La compressione dei video è un processo che permette di ridurre la dimensione dei
+              file video senza compromettere troppo la qualità dell'immagine. Ci sono diversi
+              metodi di compressione utilizzati per i video, tra cui:
+              <ul style="text-align: left;">
+                <li>MPEG (moving picture experts group), il più diffuso ma complesso;</li>
+                <li>Quick Time, di Apple. (formato .MOV);</li>
+                <li>AVI (Audio Video Interleave) di Intel, usato da microsoft.</li>
+              </ul>
+              <p>
+                Ci sono anche altri formati di compressione come H.264, H.265, VP9, e altri ancora,
+                che vengono utilizzati per specifici scopi, come ad esempio la compressione per la
+                trasmissione su internet, la compressione per la registrazione su supporti di
+                memorizzazione, o la compressione per la creazione di DVD e Blu-ray. La scelta 
+                del formato di compressione dipende dalle esigenze specifiche del progetto e 
+                dalla qualità desiderata.
+              </p>
+            </p>            
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+<footer>
+  <div><img src="immagini/Logo.svg" alt="logo" class="logo_footer"></div>
+  <p class="nome">Prodotto da Cosimo Cervellera e Cristian Cavallo</p>
+  <p class="sito-principale">Per il sito principale <a href="https://main.cosimocerveller.repl.co">clicca qui</a></p>
+  <p class="social">Contattami e seguimi su:</p>
+  <p class="social">
+    <a class="social" href="malito:cos.cervellera@gmail.com"><img style="width: 65px;height: 50px;" 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/200px-Gmail_icon_%282020%29.svg.png" alt="Gmail"></a>
+    <a class="social" href="https://replit.com/@CosimoCerveller"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Replit"></a>
+    <a class="social" href="http://www.instagram.com/cosimo_cervellera"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png" alt="Instagram"></a>
+  </p>
+  <p class="provenienza">CAP: 72028<br><a href="https://goo.gl/maps/PXHaCJ3FZWoxLHud9">Torre Santa Susanna (BR)</a></p>
+  <p class="diritti-riservati">Diritti riservati: &copy; Cosimo Cervellera e Cristian Cavallo - Tutti i diritti riservati</p>
+</footer>
+</html>

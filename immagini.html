@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+  <meta name="google-site-verification" content="XQ_bXNp1leBU9GJze12lv4oNww8FmS10HIZGrrIuJuc" />
+  <meta charset="utf-8">
+  <title>Multimedialità_immagini</title>
+  <script src="script.js"></script>
+  <link rel="icon" href="immagini/logo.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+<nav id="navbar">
+  <!--Collegamenti barra di navigazione-->
+  <table>
+    <th style="width: 50px; border: 0;"><button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button></th>
+    <th style="border: 0;"><a href="index.html">Home</a></th>
+    <th style="border: 0;"><a href="immagini.html">Immagini</a></th>
+    <th style="border: 0;"><a href="colori.html">Colori</a></th>
+    <th style="border: 0;"><a href="video.html">Video</a></th>
+    <th style="border: 0;"><a href="suoni.html">Suoni</a></th>
+    <th style="border: 0;"><a href="dimensione_file.html">Calcolo dimensioni di un file</a></th>
+  </table>
+</nav>
+<body bgcolor="lightblue">
+  <header style="background-image: url(immagini/foto/immagine_esempio.jpg);" id="header">
+    <div class="container">
+      <h1 style="color: white;width: 100%;">Le immagini</h1>
+    </div>
+  </header>
+  <div>
+    <h2>Digitalizzazione delle immagini</h2>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            Per essere visualizzate e memorizzate, le immagini vanno digitalizzate, cioè convertite in binario.
+            <br>
+            L'immagine viene prima acquisita da un dispositivo, ad esempio
+            una fotocamera o uno scanner. Successivamente viene campionata
+            tramite una griglia, che divide l'immagine in quadratini di uguali
+            dimensioni chiamati <b>pixel</b>.
+            La qualità di un'immagine dipende dalla sua <b>risoluzione</b>, ovvero
+            dal numero di pixel. Quindi, più è alto il numero di pixel di
+            un'immagine, più questa sarà fedele alla realtà.
+            <br>
+            Ogni pixel può assumere una certa gamma di colori, cioè 2<sup>n bit</sup>
+            colori. Il numero di bit necessari a rappresentare un pixel è detto
+            <b>profondità</b>. Dopo il campionamento l'immagine viene quantizzata, quindi,
+            a ogni pixel viene assegnato il colore predominante presente al suo interno e
+            il colore assegnato viene approssimato al livello più vicino.
+            <br>
+            A questo punto l'immagine viene digitalizzata: a ogni pixel corrisponde un codice
+            binario indicante il suo colore (per semplicità per identificare i colori viene
+            usato il corrispondente esadecimale). Il codice binario dell'immagine viene
+            scritto prendendo il codice binario di ogni pixel da destra verso sinistra,
+            dal basso verso l'alto.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img style="vertical-align: top;" src="immagini/foto/gioconda.jpg"></td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <div>
+    <h3>Compressione dei file</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            La compressione di un file può essere:
+          <ul style="text-align: left;">
+
+            <li><b>lossless</b> (senza perdita), dopo il processo di decompressione l'immagine sarà uguale a prima;</li>
+            <li><b>lossy</b> (con perdita), causa una perdita di qualità alla fine del processo di compressione.</li>
+          </ul>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Formato BITMAP</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            Il formato <b>BITMAP</b> è un formato non compresso, si chiama così perché risulta essere la "mappa"
+            dell'immagine, infatti, è la rappresentazione dell'immagine con codifica dei pixel.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img style="vertical-align: top;" src="immagini/foto/montagne.bmp"></td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Formato JPEG (Joint Photographic Experts Group)</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p style="margin-right: 100px;">
+            Il formato <b>JPEG</b> viene utilizzato dalle immagini di fotocamere e scanner.
+            Questo formato supporta massimo 8 bit per colore e utilizza un algoritmo di compressione con perdita
+            e raggiunge i livelli più alti di compressione rispetto agli altri formati.
+            La sua estensione è .jpg o .jpeg.
+            Questo formato non supporta la trasparenza e i livelli multipli e si può scegliere la qualità dell'immagine
+            durante il processo di compressione.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/gatto_qualità.jpeg"></td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Formato GIF (CompuServe Graphic Interface)</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p style="margin-right: 100px;">
+            Il formato <b>GIF</b> consiste in un'immagine animata (breve video). Il GIF è caratterizzato da una sequenza
+            di immagini compresse che danno l'idea del movimento. Ha una profondità di 8 bit totali (256 colori).
+            Risulta efficiente quando l'immagine ha grandi aree di colore uniforme e darà scarsi risultati con
+            un'immagine più dettagliata.
+            <br>
+            Il formato GIF è quindi lossless con meno di 256 colori e lossy con più di 256 colori.
+            L'estensione è .gif e inoltre può essere sia animato che inanimato.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/Simple-Animations.gif"></td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Formato PNG (Portable Network Graphics)</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            Il formato <b>PNG</b> è il formato bitmap più recente e sostituisce i GIF su Internet.
+            Supporta il colore a 32 bit e a parità di compressione pesa di più, ma consente di gestire più livelli
+            e la trasparenza. Il byte aggiuntivo serve a regolare la trasparenza dell'immagine, questo canale è chiamato
+            canale
+            Alpha. Con valore 0 si ha l'opacità e con 255 la trasparenza totale. L'estensione è .png.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/Red-Smoke-Transparent-Images-PNG.png"></td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <div>
+    <h2>Immagini vettoriali</h2>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            Ingrandendo un'immagine <b>raster</b> (bitmap), essendo basata
+            su una matrice di punti (pixel), si sgrana. Invece un'immagine
+            <b>vettoriale</b>, indipendentemente dal suo ridimensionamento, rimane
+            invariata, perché è gestita a livello matematico.
+            <br>
+            Con questo metodo non vengono memorizzati i pixel ma le <b>equazioni</b>
+            che ne calcolano le coordinate.
+            La colorazione avviene colorando linee e aree chiuse.
+            <br>
+            Risulta facile rasterizzare un'immagine vettoriale ma non
+            il contrario, pertanto per realizzare ad esempio un logo
+            aziendale si parte da programmi di grafica appositi.
+            <br>
+            I formati più comuni sono AI (Adobe Illustrator), EPS (Encapsulated
+            Post Script), PDF (Portable Document Format), SVG (Scalable Vector Graphics).
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/Vector-vs-Raster.jpg"></td>
+      </tr>
+    </table>
+  </div>
+</body>
+<footer>
+  <div><img src="immagini/Logo.svg" alt="logo" class="logo_footer"></div>
+  <p class="nome">Prodotto da Cosimo Cervellera e Cristian Cavallo</p>
+  <p class="sito-principale">Per il sito principale <a href="https://main.cosimocerveller.repl.co">clicca qui</a></p>
+  <p class="social">Contattami e seguimi su:</p>
+  <p class="social">
+    <a class="social" href="malito:cos.cervellera@gmail.com"><img style="width: 65px;height: 50px;" 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/200px-Gmail_icon_%282020%29.svg.png" alt="Gmail"></a>
+    <a class="social" href="https://replit.com/@CosimoCerveller"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Replit"></a>
+    <a class="social" href="http://www.instagram.com/cosimo_cervellera"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png" alt="Instagram"></a>
+  </p>
+  <p class="provenienza">CAP: 72028<br><a href="https://goo.gl/maps/PXHaCJ3FZWoxLHud9">Torre Santa Susanna (BR)</a></p>
+  <p class="diritti-riservati">Diritti riservati: &copy; Cosimo Cervellera  e Cristian Cavallo- Tutti i diritti riservati</p>
+</footer>
+</html>

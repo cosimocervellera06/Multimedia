@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+  <meta name="google-site-verification" content="XQ_bXNp1leBU9GJze12lv4oNww8FmS10HIZGrrIuJuc" />
+  <meta charset="utf-8">
+  <title>Multimedialità_colori</title>
+  <script src="script.js"></script>
+  <link rel="icon" href="immagini/logo.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+<nav id="navbar">
+  <!--Collegamenti barra di navigazione-->
+  <table>
+    <th style="width: 50px; border: 0;"><button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button></th>
+    <th style="border: 0;"><a href="index.html">Home</a></th>
+    <th style="border: 0;"><a href="immagini.html">Immagini</a></th>
+    <th style="border: 0;"><a href="colori.html">Colori</a></th>
+    <th style="border: 0;"><a href="video.html">Video</a></th>
+    <th style="border: 0;"><a href="suoni.html">Suoni</a></th>
+    <th style="border: 0;"><a href="dimensione_file.html">Calcolo dimensioni di un file</a></th>
+  </table>
+</nav>
+<body bgcolor="lightblue">
+  <header style="background-image: url(immagini/sfondi/colours.jpg);" id="header">
+    <div class="container">
+      <h1 style="color: white;width: 100%;">I colori</h1>
+    </div>
+  </header>
+  <div>
+    <table>
+      <h2>Come funziona la luce</h2>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            La luce è un'onda elettromagnetica che si propaga nello spazio e ci permette
+            di vedere gli oggetti intorno a noi. La lunghezza d'onda è la distanza tra due
+            punti consecutivi di un'onda, che determina la sua frequenza e il suo colore.
+            I colori sono una caratteristica della luce visibile. La luce visibile è una
+            parte dello spettro elettromagnetico che include i colori dell'arcobaleno, dal
+            rosso al violetto. Ogni colore ha una lunghezza d'onda specifica.
+            Il rosso ha la lunghezza d'onda più lunga e il violetto ha la lunghezza d'onda
+            più corta. I colori intermedi, come l'arancione e il giallo, hanno lunghezze
+            d'onda intermedie.
+            Quando la luce colpisce un oggetto, può essere riflessa, rifratta o assorbita.
+            La riflessione e la rifrazione causano cambiamenti nel colore della luce, mentre
+            l'assorbimento fa sì che il colore dell'oggetto sia percepito dall'osservatore.
+            La percezione dei colori dipende dall'intensità della luce e dalla lunghezza
+            d'onda specifica.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/Spettro_luce.png"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <h3>Sistema additivo (RGB)</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            La luce della fonte luminosa è uguale alla somma delle varie
+            lunghezze d'onda (i colori). Il nostro occhio può percepire
+            soltanto il rosso, il verde e il blu (RGB).
+            Lo spazio colore RGB viene usato per emettere colori (ad esempio
+            monitor o luci).
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/RGB.png"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <h3>Sistema sottrattivo (CMYK)</h3>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            La luce viene assorbita dalla superficie illuminata riflettendo i
+            colori non assorbiti, cioè quelli che vediamo (per questo motivo
+            è definito sottrattivo). Questo spazio colore si chiama CMYK:
+            <b>C</b>YAN <b>M</b>AGENTA <b>Y</b>ELLOW BLAC<b>K</b>.
+            Questo metodo viene utilizzato per tutto ciò che ha a che fare
+            con la luce riflessa come la pittura o la stampa. <br><br>
+            Unendo tutti i colori si ottiene il bistro (un tipo di marrone) e non il
+            nero. Per questo motivo ai colori ciano, magenta e giallo è stato aggiunto
+            il nero.
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/CMYK.png"></td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <h2>Codifica RGB</h2>
+  <p>
+    Il pixel è rappresentato da una combinazione dei tre colori. Per ogni colore
+    primario si utilizza un byte, quindi per l'RGB si usano 3 byte (24 bit) per
+    pixel. Il valore di ogni componente è compreso tra 0 e 255. Con 8 bit per colore
+    sono presenti 2<sup>8</sup> (256) gradazioni diverse:
+  </p>
+  <p>
+    256(R) x 256(G) x 256(B) = 16777216 colori
+  </p>
+  <div id="color-picker">
+    <table>
+      <tr>
+        <td style="border: 0;"><label>Rosso (Red): <input type="range" id="red" min="0" max="255" onpointerenter="colorRGB()"></label></td>
+        <td style="border: 0;"><label>Verde (Green): <input type="range" id="green" min="0" max="255" onpointerenter="colorRGB()"></label></td>
+        <td style="border: 0;"><label>Blu (Blue): <input type="range" id="blue" min="0" max="255" onpointerenter="colorRGB()"></label></td>
+        <td style="border: 0;">
+          <div id="color-preview"></div>
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 0;"><label>hex: <input type="text" id="hex" maxlength="6"></label></td>
+        <td style="border: 0;"></td>
+        <td style="border: 0;"></td>
+        <td style="border: 0;">
+          <div id="color-info">
+            <p id="color-hex"></p>
+            <p id="color-rgb"></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p>
+      Qui si potranno inserire i livelli di rosso, verde e blu, visualizzando il risultato
+      finale. Nella casella hex è possibile inserire il codice esadecimale e visualizzare
+      il colore corrispondente.
+    </p>
+  </div>
+
+  <hr>
+  <div>
+    <h2>Codifica HSL</h2>
+    <table>
+      <tr>
+        <td style="border: 0;" class="p">
+          <p>
+            Si basa sul fatto che siamo in grado di percepire solo questi tre attributi del colore:
+          <ul style="text-align: left;">
+            <li>tonalità, i colori sono classificati in base alla variazione di lunghezza
+              d'onda della luce;</li>
+            <li>saturazione, intensità del colore indicata con la differenza di un colore
+              rispetto a un grigio con la stessa luminosità;</li>
+            <li>luminosità, intensità della chiarezza di un colore.</li>
+          </ul>
+          </p>
+        </td>
+        <td style="border: 0;" class="img"><img src="immagini/foto/hsl-color-wheel.png"></td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td style="border: 0;">
+          Tonalità (Hue):
+          <input id="hue" type="range" min="0" max="360" value="0" onpointerenter="colorHSL()"><br><br><span id="hue-value">0</span>
+        </td>
+        <td style="border: 0;">
+          Saturazione (Saturation):
+          <input id="saturation" type="range" min="0" max="100" value="0" onpointerenter="colorHSL()"><br><br><span id="saturation-value">0</span>%
+        </td>
+        <td style="border: 0;">
+          Luminosità (Lightness):
+          <input id="lightness" type="range" min="0" max="100" value="0" onpointerenter="colorHSL()"><br><br><span id="lightness-value">0</span>%
+        </td>
+        <td style="border: 0;">
+          <div id="square"></div>
+        </td>
+      </tr>
+    </table>
+    <p>
+      Qui si potranno inserire i livelli di tonalità, saturazione e luminosità
+      visualizzando il risultato finale.
+    </p>
+  </div>
+  </div>
+</body>
+<footer>
+  <div><img src="immagini/Logo.svg" alt="logo" class="logo_footer"></div>
+  <p class="nome">Prodotto da Cosimo Cervellera e Cristian Cavallo</p>
+  <p class="sito-principale">Per il sito principale <a href="https://main.cosimocerveller.repl.co">clicca qui</a></p>
+  <p class="social">Contattami e seguimi su:</p>
+  <p class="social">
+    <a class="social" href="malito:cos.cervellera@gmail.com"><img style="width: 65px;height: 50px;" 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/200px-Gmail_icon_%282020%29.svg.png" alt="Gmail"></a>
+    <a class="social" href="https://replit.com/@CosimoCerveller"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Replit"></a>
+    <a class="social" href="http://www.instagram.com/cosimo_cervellera"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png" alt="Instagram"></a>
+  </p>
+  <p class="provenienza">CAP: 72028<br><a href="https://goo.gl/maps/PXHaCJ3FZWoxLHud9">Torre Santa Susanna (BR)</a></p>
+  <p class="diritti-riservati">Diritti riservati: &copy; Cosimo Cervellera  e Cristian Cavallo- Tutti i diritti riservati</p>
+</footer>
+</html>

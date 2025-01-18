@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta name="google-site-verification" content="XQ_bXNp1leBU9GJze12lv4oNww8FmS10HIZGrrIuJuc" />
+    <meta charset="utf-8">
+    <title>Multimedialità_suoni</title>
+    <script src="script.js"></script>
+    <link rel="icon" href="immagini/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  </head>
+<button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+<nav id="navbar">
+  <!--Collegamenti barra di navigazione-->
+  <table>
+    <th style="width: 50px; border: 0;"><button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button></th>
+    <th style="border: 0;"><a href="index.html">Home</a></th>
+    <th style="border: 0;"><a href="immagini.html">Immagini</a></th>
+    <th style="border: 0;"><a href="colori.html">Colori</a></th>
+    <th style="border: 0;"><a href="video.html">Video</a></th>
+    <th style="border: 0;"><a href="suoni.html">Suoni</a></th>
+    <th style="border: 0;"><a href="dimensione_file.html">Calcolo dimensioni di un file</a></th>
+  </table>
+</nav>
+  <body bgcolor="lightblue">
+    <header style="background-image: url(immagini/foto/suono.jpeg);" id="header">
+      <div class="container">
+        <h1 style="color: white;width: 100%;">I suoni</h1>
+      </div>
+    </header>
+    <p>
+      Un suono è un'alterazione della pressione dell'aria che viene percepita
+      dall'orecchio umano o da un microfono. La frequenza di un suono è la velocità 
+      con cui si ripetono le onde, e determina la sua altezza o tonalità. La pressione
+      sonora è l'intensità del suono e determina il suo volume. Quando un suono viene
+      registrato, la pressione sonora viene trasformata in un segnale elettrico che può
+      essere registrato e riprodotto. La rappresentazione grafica di un suono mostra la
+      pressione sonora in funzione del tempo.
+    </p>
+    <div>
+      <h2>Digitalizzazione dei suoni</h2>
+      <table>
+        <tr>
+          <td style="border: 0;" class="p">
+            <p>
+              Il suono analogico, come quello registrato da un microfono, deve essere 
+              convertito in un segnale digitale per essere memorizzato e riprodotto. Il 
+              processo di conversione si chiama campionamento. Durante il campionamento, 
+              il segnale analogico viene misurato a intervalli regolari, creando una serie 
+              di punti. Per ottenere una qualità del suono simile a quella di un CD, il 
+              segnale deve essere campionato a 44100 volte al secondo. Successivamente, 
+              il segnale viene quantizzato, ovvero ogni campione viene arrotondato al valore 
+              più vicino di una scala discreta di livelli, determinati dal numero di bit
+              utilizzati.
+            </p>                     
+          </td>
+          <td style="border: 0;" class="img"><img src="immagini/foto/suono_quantizzato.png"></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h2>Compressione dei suoni</h2>
+      <table>
+        <tr>
+          <td style="border: 0;" class="p">
+            <p>
+              Il MIDI (Musical Instrument Digital Interface) è un formato di file digitale
+              utilizzato per la registrazione e la riproduzione della musica. Esso codifica 
+              le informazioni su quali note suonare e con quale strumento, ma non include 
+              alcuna registrazione del suono vero e proprio. Per riprodurre un file MIDI, 
+              è necessario utilizzare un sintetizzatore che generi i suoni in base alle 
+              istruzioni del file. Il MIDI è molto efficiente dal punto di vista dello spazio 
+              di archiviazione, ma presenta limitazioni nella riproduzione del suono rispetto 
+              ad altri formati come l'MP3. <br><br>Caratteristiche:
+              <ul style="text-align: left;"> 
+                <li> codifica le note e gli strumenti che devono eseguirle;</li>
+                <li> solo musica, non voce;</li>
+                <li> richiede un sintetizzatore;</li>
+                <li> molto efficiente ma con limitazioni.</li>
+              </ul>
+            </p>                     
+          </td>
+          <td style="border: 0;" class="img"><img src="immagini/foto/midi.jpg"></td>
+        </tr>
+        <tr>
+          <td style="border: 0;" class="p">
+            <p>
+              Il formato MP3 è una codifica audio digitale. Utilizza un metodo di compressione 
+              per ridurre le dimensioni del file audio mantenendo una qualità audio accettabile.
+              La compressione MP3 consente di memorizzare una grande quantità di musica su
+              dispositivi di archiviazione di piccole dimensioni, come lettori MP3 e smartphone.
+              MP3 è uno dei formati audio più diffusi al mondo e supportato da quasi tutti i
+              dispositivi multimediali e software di riproduzione audio. Tuttavia, la compressione
+              può causare una perdita di qualità audio rispetto all'originale, a seconda del
+              livello di compressione scelto.<br><br>Caratteristiche:
+              <ul style="text-align: left;"> 
+                <li>MPEG-3: variante MPEG per suoni;</li>
+                <li> molto diffuso (infatti non ha limitazioni);</li>
+                <li> molto efficiente (si avvicina alla qualità CD).</li>
+              </ul>
+            </p>                     
+          </td>
+          <td style="border: 0;" class="img"><img src="immagini/foto/mp3.jpg"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+<footer>
+  <div><img src="immagini/Logo.svg" alt="logo" class="logo_footer"></div>
+  <p class="nome">Prodotto da Cosimo Cervellera e Cristian Cavallo</p>
+  <p class="sito-principale">Per il sito principale <a href="https://main.cosimocerveller.repl.co">clicca qui</a></p>
+  <p class="social">Contattami e seguimi su:</p>
+  <p class="social">
+    <a class="social" href="malito:cos.cervellera@gmail.com"><img style="width: 65px;height: 50px;" 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/200px-Gmail_icon_%282020%29.svg.png" alt="Gmail"></a>
+    <a class="social" href="https://replit.com/@CosimoCerveller"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Replit"></a>
+    <a class="social" href="http://www.instagram.com/cosimo_cervellera"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png" alt="Instagram"></a>
+  </p>
+  <p class="provenienza">CAP: 72028<br><a href="https://goo.gl/maps/PXHaCJ3FZWoxLHud9">Torre Santa Susanna (BR)</a></p>
+  <p class="diritti-riservati">Diritti riservati: &copy; Cosimo Cervellera  e Cristian Cavallo- Tutti i diritti riservati</p>
+</footer>
+</html>

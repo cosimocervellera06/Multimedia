@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta name="google-site-verification" content="XQ_bXNp1leBU9GJze12lv4oNww8FmS10HIZGrrIuJuc" />
+    <meta charset="utf-8">
+    <title>Multimedialità_dimensioni_file</title>
+    <script src="script.js"></script>
+    <link rel="icon" href="immagini/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+<nav id="navbar">
+  <!--Collegamenti barra di navigazione-->
+  <table>
+    <th style="width: 50px; border: 0;"><button id="toggleBtn" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button></th>
+    <th style="border: 0;"><a href="index.html">Home</a></th>
+    <th style="border: 0;"><a href="immagini.html">Immagini</a></th>
+    <th style="border: 0;"><a href="colori.html">Colori</a></th>
+    <th style="border: 0;"><a href="video.html">Video</a></th>
+    <th style="border: 0;"><a href="suoni.html">Suoni</a></th>
+    <th style="border: 0;"><a href="dimensione_file.html">Calcolo dimensioni di un file</a></th>
+  </table>
+</nav>
+  <body bgcolor="lightblue">
+    <header style="background-image: url(immagini/sfondi/binario.jpg);" id="header">
+      <div class="container">
+        <h1 style="color: white;width: 100%; font-size: 8vw;">Calcolo dimensioni di un file</h1>
+      </div>
+    </header>
+    <h2>In questa pagina potrai sapere quanto pesa un file con caratteristiche date</h2>
+    <p>
+      Questa sezione utilizza un programma progettato in C, riscritto in javascript, che prende in input 
+      dei parametri e restituisce la dimensione del file. <br>
+      Il programma moltiplica i parametri e divide il risultato per 8 per ottenere la dimensione in byte 
+      e poi tramite un ciclo while ne calcola l'ordine di grandezza che può essere tra i seguenti:
+      <table>
+        <tr>
+          <th>Nome</th>
+          <th>Simbolo</th>
+          <th>Grandezza in byte</th>
+          <th>Grandezza rispetto al multiplo precedente</th>
+          <th>Ordine di grandezza</th>
+        </tr>
+        <tr>
+          <td>byte</td>
+          <td>B</td>
+          <td>2<sup>0</sup>B</td>
+          <td>2<sup>0</sup>B</td>
+          <td>10<sup>1</sup></td>
+        </tr>
+        <tr>
+          <td>kilobyte</td>
+          <td>kB</td>
+          <td>2<sup>10</sup>B</td>
+          <td>2<sup>10</sup>B</td>
+          <td>10<sup>3</sup></td>
+        </tr>
+        <tr>
+          <td>megabyte</td>
+          <td>MB</td>
+          <td>2<sup>20</sup>B</td>
+          <td>2<sup>10</sup>kB</td>
+          <td>10<sup>6</sup></td>
+        </tr>
+        <tr>
+          <td>gigabyte</td>
+          <td>GB</td>
+          <td>2<sup>30</sup>B</td>
+          <td>2<sup>10</sup>MB</td>
+          <td>10<sup>9</sup></td>
+        </tr>
+        <tr>
+          <td>terabyte</td>
+          <td>TB</td>
+          <td>2<sup>40</sup>B</td>
+          <td>2<sup>10</sup>GB</td>
+          <td>10<sup>12</sup></td>
+        </tr>
+        <tr>
+          <td>petabyte</td>
+          <td>PB</td>
+          <td>2<sup>50</sup>B</td>
+          <td>2<sup>10</sup>TB</td>
+          <td>10<sup>15</sup></td>
+        </tr>
+        <tr>
+          <td>exabyte</td>
+          <td>EB</td>
+          <td>2<sup>60</sup>B</td>
+          <td>2<sup>10</sup>PB</td>
+          <td>10<sup>18</sup></td>
+        </tr>
+        <tr>
+          <td>zettabyte</td>
+          <td>ZB</td>
+          <td>2<sup>70</sup>B</td>
+          <td>2<sup>10</sup>EB</td>
+          <td>10<sup>21</sup></td>
+        </tr>
+        <tr>
+          <td>yottabyte</td>
+          <td>YB</td>
+          <td>2<sup>80</sup>B</td>
+          <td>2<sup>10</sup>ZB</td>
+          <td>10<sup>24</sup></td>
+        </tr>
+      </table>
+    </p>
+    
+    <hr>
+    <h3>Calcolo della dimensione di un'immagine</h3>
+    <!--Calcolo dimensione immagine-->
+    <div>
+      <table>
+        <tr>
+          <td><p>Inserisci l'altezza</p></td>
+          <td><p>Inserisci la larghezza dell'immagine</p></td>
+          <td><p>Inserisci la  profondità (in bit)</p></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="altezza"></td>
+          <td><input type="text" id="larghezza"></td>
+          <td><input type="text" id="profondità"></td>
+        </tr>
+      </table>
+      
+      <button onclick="calculate1()">Calcola</button>
+      <p id="output1"></p>
+    </div>
+
+    <hr>
+    <h3>Calcolo della dimensione di un video</h3>
+    <!--Calcolo dimensione video-->
+    <div>
+      <table>
+        <tr>
+          <td><p>Inserisci la durata del video in secondi</p></td>
+          <td><p>Inserisci il numero di fps</p></td>
+          <td><p>Inserisci l'altezza di un frame</p></td>
+        </tr>
+
+        <tr>
+          <td><input type="text" id="durata"></td>
+          <td><input type="text" id="fps"></td>
+          <td><input type="text" id="altezza1"></td>
+        </tr>
+        <tr>
+          <td><p>Inserisci la larghezza di un frame</p></td>
+          <td><p>Inserisci la  profondità di un frame (in bit)</p></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="larghezza1"></td>
+          <td><input type="text" id="profondità1"></td>
+        </tr>
+      </table>
+      
+      <button onclick="calculate2()">Calcola</button>
+      <p id="output2"></p>
+    </div>
+    <hr>
+    <h3>Calcolo della dimensione di un audio</h3>
+    <!--Calcolo dimensione suono-->
+    <div>
+      <table>
+        <tr>
+          <td><p>Inserisci la durata dell'audio in secondi</p></td>
+          <td><p>Inserisci il numero di bit per campione</p></td>
+          <td><p>Inserisci il numero di campioni al secondo</p></td>
+          <td><p>Inserisci il numero di canali su cui verrà riprodotto l'audio</p></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="durata1"></td>
+          <td><input type="text" id="nbit"></td>
+          <td><input type="text" id="campioni"></td>
+          <td><input type="text" id="canali"></td>
+        </tr>
+      </table>
+      
+      <button onclick="calculate3()">Calcola</button>
+      <p id="output3"></p>
+    </div>
+  </body>
+<footer>
+  <div><img src="immagini/Logo.svg" alt="logo" class="logo_footer"></div>
+  <p class="nome">Prodotto da Cosimo Cervellera e Cristian Cavallo</p>
+  <p class="sito-principale">Per il sito principale <a href="https://main.cosimocerveller.repl.co">clicca qui</a></p>
+  <p class="social">Contattami e seguimi su:</p>
+  <p class="social">
+    <a class="social" href="malito:cos.cervellera@gmail.com"><img style="width: 65px;height: 50px;" 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/200px-Gmail_icon_%282020%29.svg.png" alt="Gmail"></a>
+    <a class="social" href="https://replit.com/@CosimoCerveller"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Replit"></a>
+    <a class="social" href="http://www.instagram.com/cosimo_cervellera"><img style="width: 50px;height: 50px;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png" alt="Instagram"></a>
+  </p>
+  <p class="provenienza">CAP: 72028<br><a href="https://goo.gl/maps/PXHaCJ3FZWoxLHud9">Torre Santa Susanna (BR)</a></p>
+  <p class="diritti-riservati">Diritti riservati: &copy; Cosimo Cervellera  e Cristian Cavallo- Tutti i diritti riservati</p>
+</footer>
+</html>
